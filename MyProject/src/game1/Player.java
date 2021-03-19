@@ -8,6 +8,21 @@ public class Player {
     private String battlecry;
     Sword sword;
 
+
+    //public/private void/int/String/...   name(){}
+
+    public void getNewSword(){
+        sword = new Sword();
+    }
+
+    public void setBattlecry(String battlecry){
+       this.battlecry = battlecry;
+    }
+
+    public String getBattlecry(){
+        return battlecry;
+    }
+
     public int getHp() {
         return hp;
     }

@@ -10,6 +10,7 @@ public class Main {
         Player p2 = new Player(sc.next(), sc.nextLine());
         boolean flag = true;
 
+
         Player pp1;
         Player pp2;
 
@@ -41,6 +42,7 @@ public class Main {
         } else {
             System.out.println(p1.getName() + " wins!");
         }
+
 
 
     }
