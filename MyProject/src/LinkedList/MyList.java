@@ -1,6 +1,6 @@
 package LinkedList;
 
-public class MyList {
+public class MyList implements ExInt{
     Node root;
     int size;
 
@@ -8,7 +8,9 @@ public class MyList {
         root = new Node();
     }
 
+    @Override
     public void add(int a) {
+        //int a = 5;
         Node node = root;
         while (node.link != null) {
             node = node.link;
@@ -20,9 +22,12 @@ public class MyList {
 
 
     public void addAll(int[] array) {
-
+        for (int i = 0; i < array.length; i++) {
+            add(array[i]);
+        }
     }
 
+    @Override
     public void delete(int a) {
         if (a > size) {
             throw new IndexOutOfBoundsException();
@@ -43,6 +48,7 @@ public class MyList {
         size--;
     }
 
+    @Override
     public int get(int a) {
         if (a > size) {
             throw new IndexOutOfBoundsException();
@@ -55,6 +61,7 @@ public class MyList {
         }
         return node.item;
     }
+
 
 //    public void test(){
 ////        Node node1 = node;
