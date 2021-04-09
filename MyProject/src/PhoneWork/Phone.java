@@ -7,6 +7,14 @@ public class Phone {
         System.out.printf("hello " + name);
     }
 
+    public void receiveCall(String name) {
+        System.out.println("Звонит " + name );
+    }
+
+    public void receiveCall(String name, String number) {
+        System.out.println("Звонит " + name+ " " + number);
+    }
+
     public Phone(String number) {
         this.number = number;
     }

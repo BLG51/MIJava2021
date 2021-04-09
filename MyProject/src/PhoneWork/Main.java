@@ -11,7 +11,7 @@ public class Main {
         //один SmartPhone
         SmartPhone smartphone = new SmartPhone("+79073842847", "Anton");
 //У любого Phone вызвать метод receiveCall("Anton")
-        phone_1.hello("Artem");
+        phone_1.receiveCall("Anton");
 //Вывести в консоль getNumber() у любого Phone.
         System.out.println( smartphone.getUsername() );
 
