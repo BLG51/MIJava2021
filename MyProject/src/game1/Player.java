@@ -8,20 +8,25 @@ public class Player {
     private String battlecry;
     protected Sword sword;
 
-
-    //public/private void/int/String/...   name(){}
-
-    public void getNewSword(){
-        sword = new Sword();
+    public Player(String name, String battlecry) {
+        this.name = name;
+        this.hp = 100;
+        this.battlecry = battlecry;
+        this.sword = new Sword();
     }
 
     public void setBattlecry(String battlecry){
-       this.battlecry = battlecry;
+        this.battlecry = battlecry;
     }
 
     public String getBattlecry(){
         return battlecry;
     }
+    //public/private void/int/String/...   name(){}
+
+    //public void getNewSword(){
+       // sword = new Sword();
+    //}
 
     public int getHp() {
         return hp;
@@ -40,12 +45,7 @@ public class Player {
     }
 
 
-    public Player(String name, String battlecry) {
-        this.name = name;
-        this.hp = 100;
-        this.battlecry = battlecry;
-        this.sword = new Sword();
-    }
+
 
     public void shout() {
         System.out.println(battlecry);
