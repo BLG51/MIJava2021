@@ -6,7 +6,7 @@ public class Player {
     private String name;
     private int hp;
     private String battlecry;
-    Sword sword;
+    protected Sword sword;
 
     public int getHp() {
         return hp;
@@ -20,6 +20,11 @@ public class Player {
         return name;
     }
 
+    public Sword getSword() {
+        return sword;
+    }
+
+
     public Player(String name, String battlecry) {
         this.name = name;
         this.hp = 100;
@@ -31,11 +36,27 @@ public class Player {
         System.out.println(battlecry);
     }
 
-    public void slash(Player p) {
+    public void getNewSword() {
+        sword = new Sword();
+    }
+
+    public void getNewPowerSword() {
+        sword = new PowerSword();
+        ((PowerSword) sword).increasePower();
+    }
+
+    public void heal(){
         Random random = new Random();
-        if (random.nextInt(100) > sword.getWeight()) {
-            p.setHp(p.getHp() - random.nextInt(sword.getPower()));
-            sword.setDurability(sword.getDurability() - random.nextInt(10));
+        hp += random.nextInt(30);
+    }
+
+    public void slash(Player p) {
+        if (sword.getDurability() > 0) {
+            Random random = new Random();
+            if (random.nextInt(100) > sword.getWeight()) {
+                p.setHp(p.getHp() - random.nextInt(sword.getPower()));
+                sword.setDurability(sword.getDurability() - random.nextInt(10));
+            }
         }
     }
 }

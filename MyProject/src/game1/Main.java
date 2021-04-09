@@ -10,6 +10,7 @@ public class Main {
         Player p2 = new Player(sc.next(), sc.nextLine());
         boolean flag = true;
 
+
         Player pp1;
         Player pp2;
 
@@ -28,10 +29,17 @@ public class Main {
                 pp1.slash(pp2);
             } else if (action.equals("shout")) {
                 pp1.shout();
+            } else if (action.equals("getNewSword")) {
+                pp1.getSword();
+            } else if (action.equals("heal")) {
+               pp1.heal();
             }
 
             System.out.println(p1.getName() + "'s hp = " + p1.getHp());
+            System.out.printf(p1.getName() + "'s sword durability = " + p1.getSword().getDurability());
+
             System.out.println(p2.getName() + "'s hp = " + p2.getHp());
+            System.out.printf(p2.getName() + "'s sword durability = " + p2.getSword().getDurability());
 
             flag = !flag;
         }

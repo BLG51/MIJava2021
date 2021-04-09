@@ -2,7 +2,7 @@ package game1;
 
 public class Sword {
     private int durability;
-    private int power;
+    protected int power;
     private int weight;
 
     Sword(){
